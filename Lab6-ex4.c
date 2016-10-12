@@ -4,7 +4,7 @@
 void main()
 {
     int i=0;
-    char arr1[ 20 ] = "Trumantiger";
+    char arr1[ 20 ] = "Trumantiger"; //increased the number of elements in arr1 so that strcpy doesn't cause seg fault
     char arr2[ 20 ];
     while(i<20){
         arr2[ i ] = 'A';
