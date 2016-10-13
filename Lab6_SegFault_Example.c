@@ -8,7 +8,7 @@ void tester(int* c, int k) {
 
 int main(int argc, char* argv[]) {
 	int i = 0, j, k;
-	int x[10001]; //increased the amount of elements in x array to avoid seg fault found in tester
+	int x[1000];
 	
 	while(i < 1000){
 		x[i] = i;
