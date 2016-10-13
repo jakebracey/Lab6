@@ -2,15 +2,19 @@
  
 int main()
 {
-    char* fileName;
+    //filename was just initialized as a pointer here with no malloced memory
+	//I defined the filename like this for simplicity
+	char fileName[50];
     printf("Specify file name you would like to print to: \n");
-    scanf("%s",&fileName);
+    scanf("%s",fileName);
  
 
-    FILE* file1 = fopen(fileName, "a+");
+    FILE* file1 = fopen(fileName, "w");
  
     char c;
-    while ((c=getchar()) != EOF)
+	//the loop was searching for 'EOF' when it should have been searching for '0'
+	//this made the program fo into an endless loop
+    while ((c=getchar()) != '0')
     {
         fprintf(file1, &c);
     }
